@@ -34,7 +34,7 @@ exports.comprobarPassword = function (usuario, callback){
 }
 
 
-//DANI 656875539
+
 
 // funcion guardarTwitt
 exports.guardarTweet = function (usuario, callback){
@@ -63,7 +63,8 @@ exports.guardarTweet = function (usuario, callback){
 
 //funcion pedirTwitts
 exports.pedirTweets = function (nombre, cuantos, callback){
-	var consulta = "SELECT nombre, texto, instante FROM mensajes where nombre = '"+ nombre +"'  limit "+ cuantos +"";
+	//var consulta = "SELECT nombre, texto, instante FROM mensajes where nombre = '"+ nombre +"'  limit "+ cuantos +"";
+	var consulta = "SELECT nombre, texto, instante FROM mensajes where nombre = '"+ nombre +"'  ORDER BY instante DESC limit "+ cuantos +"";
 	laBaseDeDatos.all(consulta, function(err, resultados){
 		console.log(resultados);
 		if(err){

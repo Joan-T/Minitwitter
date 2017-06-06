@@ -17,15 +17,76 @@ android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:text="Tweets" />
 
-<Button
-android:id="@+id/botonEnviar"
-android:onClick="boton_enviar_pulsado"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_alignLeft="@+id/elTexto"
-android:layout_below="@+id/elTexto"
-android:layout_marginLeft="40dp"
-android:layout_marginTop="32dp"
-android:text="enviar peticion rest" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="tweet"
+        android:ems="10"
+        android:layout_below="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:id="@+id/tweet" />
+
+    <Button
+        android:id="@+id/buttonpost"
+        android:onClick="boton_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="POST TWEET"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/buttonget" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="password"
+        android:ems="10"
+        android:id="@+id/password"
+        android:layout_below="@+id/nombrepost"
+        android:layout_alignStart="@+id/nombrepost" />
+
+    <Button
+        android:id="@+id/buttonget"
+        android:onClick="boton_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="GET TWEET"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="nombre"
+        android:ems="10"
+        android:id="@+id/nombrepost"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonget"
+        android:layout_alignEnd="@+id/buttonget" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="numero"
+        android:ems="10"
+        android:id="@+id/numero"
+        android:layout_above="@+id/buttonget"
+        android:layout_alignStart="@+id/nombreget"
+        android:layout_marginBottom="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="nombre"
+        android:ems="10"
+        android:id="@+id/nombreget"
+        android:layout_above="@+id/numero"
+        android:layout_alignEnd="@+id/buttonget" />
 
 </RelativeLayout>
